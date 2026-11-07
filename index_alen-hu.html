@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alen Husnjak - Academic & Research CV</title>
+    <!-- Google Fonts matching Hugo Resume theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #081C15;
+            --primary-dark: #1B4332;
+            --primary-light: #E8F3EE;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --bg: #ffffff;
+            --sidebar-width: 280px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--gray);
+            background-color: var(--bg);
+            line-height: 1.65;
+            padding-left: var(--sidebar-width);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        h1 {
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.4rem;
+            border-bottom: 3px solid var(--light-gray);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+        }
+
+        .subheading {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.35rem;
+            color: var(--gray);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.03em;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Sidebar Navigation (Hugo-Resume Style) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background-color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.25rem;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .avatar-circle {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08));
+            border: 7px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Saira Extra Condensed', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.75rem;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-links {
+            list-style: none;
+            width: 100%;
+        }
+
+        .nav-links li {
+            margin: 0.55rem 0;
+        }
+
+        .nav-links a {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.72);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.12);
+            text-decoration: none;
+        }
+
+        /* Main Sections */
+        .resume-section {
+            padding: 4.5rem 4rem;
+            max-width: 1050px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        #about {
+            min-height: 92vh;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            align-items: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .contact-bar span, .contact-bar a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lead {
+            font-size: 1.12rem;
+            color: #495057;
+            margin-bottom: 1.75rem;
+            max-width: 820px;
+        }
+
+        /* Research Interest Pills */
+        .interests-title {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            font-size: 1.35rem;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .pill {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border: 1px solid rgba(8, 28, 21, 0.25);
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.3rem;
+            width: 3.3rem;
+            background-color: var(--dark);
+            color: #ffffff !important;
+            border-radius: 50%;
+            font-size: 1.35rem;
+            transition: all 0.25s ease;
+            text-decoration: none !important;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(8, 28, 21, 0.35);
+        }
+
+        /* Resume Items (Experience / Education) */
+        .resume-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.75rem;
+            gap: 2rem;
+        }
+
+        .resume-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .resume-content {
+            flex: 1;
+        }
+
+        .resume-date {
+            min-width: 190px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            padding-top: 0.3rem;
+        }
+
+        .resume-content ul {
+            margin-top: 0.6rem;
+            padding-left: 1.25rem;
+        }
+
+        .resume-content li {
+            margin-bottom: 0.45rem;
+        }
+
+        /* Publication Card */
+        .pub-card {
+            background: #fdfcfb;
+            border-left: 4px solid var(--primary);
+            border-top: 1px solid var(--light-gray);
+            border-right: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 1.6rem 1.8rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .pub-citation {
+            font-size: 1.08rem;
+            color: var(--dark);
+            margin-bottom: 0.85rem;
+        }
+
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+        .btn-badge.primary {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-badge.primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-badge.outline {
+            background-color: #ffffff;
+            color: var(--dark);
+            border: 1px solid #ced4da;
+        }
+
+        .btn-badge.outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-badge.status {
+            background-color: #e9ecef;
+            color: #495057;
+            cursor: default;
+        }
+
+        /* Course Grid for Teaching - 4 in a single row */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0 1.35rem 0;
+        }
+
+        .course-card {
+            background: #f8f9fa;
+            border: 1px solid var(--light-gray);
+            border-left: 3px solid var(--primary);
+            padding: 0.65rem 0.75rem;
+            border-radius: 6px;
+        }
+
+        .course-card strong {
+            display: block;
+            color: var(--dark);
+            font-size: 0.9rem;
+            line-height: 1.25;
+        }
+
+        .course-card span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-box {
+            background: #f8f9fa;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            padding: 1.4rem;
+        }
+
+        .skill-box h4 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.45rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.55rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-list li i {
+            color: var(--primary);
+            margin-top: 0.3rem;
+        }
+
+        /* Selected Coursework & Modal Styles */
+        .course-tags-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin: 0.65rem 0 0.85rem 0;
+        }
+
+        .course-tag {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border: 1px solid rgba(8, 28, 21, 0.2);
+            padding: 0.22rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .edu-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.75rem;
+        }
+
+        .btn-modal-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background-color: var(--primary);
+            color: #ffffff !important;
+            border: none;
+            padding: 0.42rem 0.95rem;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none !important;
+        }
+
+        .btn-modal-trigger:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(8, 28, 21, 0.25);
+        }
+
+        .btn-repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background-color: #ffffff;
+            color: var(--primary) !important;
+            border: 1px solid rgba(8, 28, 21, 0.35);
+            padding: 0.4rem 0.9rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+        .btn-repo-link:hover {
+            background-color: var(--primary-light);
+            border-color: var(--primary);
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 28, 21, 0.65);
+            backdrop-filter: blur(3px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 860px;
+            max-height: 86vh;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: modalFadeIn 0.22s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 1.2rem 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 1.65rem;
+            letter-spacing: 0.04em;
+        }
+
+        .modal-close {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #ffffff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-summary-bar {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.75rem 1.6rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            border-bottom: 1px solid rgba(8, 28, 21, 0.12);
+        }
+
+        .modal-body {
+            padding: 1.25rem 1.6rem 1.6rem 1.6rem;
+            overflow-y: auto;
+        }
+
+        .transcript-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .transcript-table th {
+            text-align: left;
+            padding: 0.65rem 0.75rem;
+            background-color: #f8f9fa;
+            color: var(--dark);
+            font-weight: 700;
+            border-bottom: 2px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+        }
+
+        .transcript-table td {
+            padding: 0.58rem 0.75rem;
+            border-bottom: 1px solid var(--light-gray);
+            color: #495057;
+        }
+
+        .transcript-table tr:hover td {
+            background-color: #fcfdfd;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 0.18rem 0.55rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .grade-5 {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .grade-4 {
+            background-color: #f1f3f5;
+            color: #495057;
+        }
+
+        .study-period {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-top: -0.45rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .modal-legend {
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--light-gray);
+            font-size: 0.84rem;
+            color: var(--gray);
+        }
+
+        .grade-3 {
+            background-color: #f1f3f5;
+            color: #495057;
+        }
+
+        .grade-2 {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+
+        .grade-pass {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+
+        /* Responsive Mobile View */
+        @media (max-width: 992px) {
+            body {
+                padding-left: 0;
+                padding-top: 65px;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 0.75rem 1.25rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .avatar-circle {
+                width: 42px;
+                height: 42px;
+                font-size: 1.35rem;
+                border-width: 2px;
+                margin-bottom: 0;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                width: auto;
+                gap: 0.4rem;
+                justify-content: flex-end;
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links a {
+                font-size: 0.95rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .resume-section {
+                padding: 3rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h2 {
+                font-size: 2.35rem;
+            }
+
+            .resume-item {
+                flex-direction: column;
+                gap: 0.35rem;
+            }
+
+            .resume-date {
+                text-align: left;
+                padding-top: 0;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="avatar-circle" title="Alen Husnjak">AH</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research-academic">Research & Academic Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="resume-section" id="about">
+        <div>
+            <h1>Alen <span class="text-primary">Husnjak</span></h1>
+            <div class="subheading contact-bar">
+                <span><i class="fa-solid fa-location-dot text-primary"></i> Zagreb, Croatia</span>
+                <span>•</span>
+                <span><i class="fa-solid fa-phone text-primary"></i> +385 99 623 0050</span>
+                <span>•</span>
+                <a href="mailto:ahusnjak0810@gmail.com"><i class="fa-solid fa-envelope"></i> ahusnjak0810@gmail.com</a>
+            </div>
+
+            <p class="lead">
+                Sociologist dedicated to bridging rigorous <strong>sociological theory</strong> with sound <strong>methodological principles</strong> to explain sociality and complex social phenomena. My theoretical work centres on sociological theory - particularly <strong>Luhmann’s systems theory</strong>, <strong>Parsons’ structural functionalism</strong>, and <strong>analytical sociology</strong> - while my methodological approach integrates <strong>qualitative and quantitative methodology</strong> with <strong>computational social sciences</strong>.
+            </p>
+
+            <div class="interests-title">Research Interests</div>
+            <div class="pill-container">
+                <span class="pill"><i class="fa-solid fa-book-open"></i> Sociological Theory</span>
+                <span class="pill"><i class="fa-solid fa-compass-drafting"></i> Epistemology & Philosophy of Social Science</span>
+                <span class="pill"><i class="fa-solid fa-code"></i> Computational Social Sciences</span>
+                <span class="pill"><i class="fa-solid fa-language"></i> Natural Language Processing</span>
+                <span class="pill"><i class="fa-solid fa-microchip"></i> Sociology of Technology</span>
+                <span class="pill"><i class="fa-solid fa-arrows-spin"></i> Sociology of Social Change</span>
+                <span class="pill"><i class="fa-solid fa-industry"></i> Postindustrial Society</span>
+                <span class="pill"><i class="fa-solid fa-scale-unbalanced"></i> Social Inequality</span>
+                <span class="pill"><i class="fa-solid fa-globe"></i> Digital Sociology</span>
+            </div>
+
+            <div class="social-icons">
+                <a class="social-icon" href="mailto:ahusnjak0810@gmail.com" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a class="social-icon" href="https://github.com/alen-hu" target="_blank" rel="noopener" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="social-icon" href="https://www.researchgate.net/profile/Alen-Husnjak" target="_blank" rel="noopener" title="ResearchGate">
+                    <i class="fa-brands fa-researchgate"></i>
+                </a>
+                <a class="social-icon" href="https://www.linkedin.com/in/alen-husnjak-5a0bb9206" target="_blank" rel="noopener" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="resume-section" id="education">
+        <h2>Education</h2>
+
+        <div class="resume-item">
+            <div class="resume-content">
+                <h3>Master of Arts in Sociology <span style="font-weight:400; font-size:1.25rem; color:var(--gray);">(univ. mag. soc. - Science Stream)</span></h3>
+                <div class="subheading">Faculty of Croatian Studies, University of Zagreb, Croatia</div>
+                <div class="study-period"><i class="fa-regular fa-calendar"></i> September 2024 - September 2026</div>
+                <ul>
+                    <li><strong>Final GPA (weighted average):</strong> 4.836 / 5.00</li>
+                    <li><strong>Master’s Thesis:</strong> <em>“The Concept of Interaction in Sociology”</em></li>
+                    <li><strong>Supervisor:</strong> Erik Brezovec, Assistant Professor, PhD</li>
+                </ul>
+                <div class="edu-actions">
+                    <button type="button" class="btn-modal-trigger" onclick="openModal('maModal')">
+                        <i class="fa-solid fa-list-check"></i> View Full Transcript of Records (25 Courses)
+                    </button>
+                    <a href="https://dabar.srce.hr/en/object/hrstud:4665" target="_blank" rel="noopener" class="btn-repo-link">
+                        <i class="fa-solid fa-book-bookmark"></i> Master’s Thesis (FHS Repository)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <div class="resume-content">
+                <h3>Bachelor of Arts in Croatology and Sociology <span style="font-weight:400; font-size:1.25rem; color:var(--gray);">(univ. bacc. croat. et soc.)</span></h3>
+                <div class="subheading">Faculty of Croatian Studies, University of Zagreb, Croatia</div>
+                <div class="study-period"><i class="fa-regular fa-calendar"></i> July 2021 - July 2024</div>
+                <ul>
+                    <li><strong>Final GPA (weighted average):</strong> 4.426 / 5.00</li>
+                    <li><strong>Bachelor’s Thesis:</strong> <em>“Cancel Culture in Contemporary Society”</em></li>
+                    <li><strong>Supervisor:</strong> Ivan Perkov, Assistant Professor, PhD</li>
+                </ul>
+                <div class="edu-actions">
+                    <button type="button" class="btn-modal-trigger" onclick="openModal('baModal')">
+                        <i class="fa-solid fa-list-check"></i> View Full Transcript of Records (52 Courses)
+                    </button>
+                    <a href="https://repozitorij.hrstud.unizg.hr/en/object/hrstud:4063" target="_blank" rel="noopener" class="btn-repo-link">
+                        <i class="fa-solid fa-book-bookmark"></i> Bachelor’s Thesis (FHS Repository)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL: MASTER'S TRANSCRIPT OF RECORDS -->
+    <div class="modal-overlay" id="maModal" onclick="handleOverlayClick(event, 'maModal')">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Master of Arts in Sociology - Transcript of Records</h3>
+                <button class="modal-close" onclick="closeModal('maModal')" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-summary-bar">
+                <span><i class="fa-solid fa-award"></i> Academic Title: univ. mag. soc. (Science Stream)</span>
+                <span><i class="fa-solid fa-chart-simple"></i> Final GPA (weighted average): 4.836 / 5.00</span>
+                <span><i class="fa-solid fa-layer-group"></i> Total ECTS: 122.0</span>
+                <span><i class="fa-regular fa-calendar-check"></i> Graduated: September 11, 2026</span>
+            </div>
+            <div class="modal-body">
+                <table class="transcript-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Course / Subject</th>
+                            <th>Hours (L+E)</th>
+                            <th>ECTS</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Contemporary Sociological Theories</td><td>30 + 30</td><td>6.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>2</td><td>Sociology of Croatian Society 5</td><td>15 + 30</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>3</td><td>Qualitative Methodology</td><td>30 + 30</td><td>6.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>4</td><td>Sociology of Migration and Ethnicity</td><td>15 + 15</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>5</td><td>Sustainable Development Policies of the European Union</td><td>30 + 15</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>6</td><td>European Union and Civil Society</td><td>30 + 15</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>7</td><td>Phenomenological Sociology</td><td>15 + 15</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>8</td><td>Student’s Internship</td><td>0 + 30</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>9</td><td>Quantitative Research Methods</td><td>30 + 30</td><td>6.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>10</td><td>Demography</td><td>30 + 30</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>11</td><td>Critical Thinking in Sociology</td><td>30 + 15</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>12</td><td>Prejudice and Discrimination Prevention</td><td>15 + 30</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>13</td><td>Sociology of Human Resources Management</td><td>15 + 30</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>14</td><td>Deviance at the Workplace</td><td>15 + 15</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>15</td><td>Geopolitics and Global Security</td><td>15 + 15</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>16</td><td>Multivariate Statistical Methods</td><td>30 + 45</td><td>6.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>17</td><td>Sociology of Drug Abuse</td><td>15 + 15</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>18</td><td>Digital Sociology</td><td>15 + 15</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>19</td><td>Risk Society</td><td>30 + 15</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>20</td><td>The Holocaust</td><td>30 + 15</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>21</td><td>Corporate Social Responsibility</td><td>15 + 15</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>22</td><td>Sociology of Social Changes</td><td>30 + 0</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>23</td><td>Sociology of the Croatian Diaspora</td><td>15 + 15</td><td>4.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>24</td><td>Graduate Work (Master’s Thesis)</td><td>-</td><td>20.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>25</td><td>Sociology of Social Control and Police</td><td>15 + 15</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                    </tbody>
+                </table>
+                <div class="modal-legend">
+                    <strong>Legend:</strong> <strong>L</strong> = Lectures &nbsp;•&nbsp; <strong>E</strong> = Exercises / Seminars
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: BACHELOR'S TRANSCRIPT OF RECORDS -->
+    <div class="modal-overlay" id="baModal" onclick="handleOverlayClick(event, 'baModal')">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Bachelor of Arts in Croatology and Sociology - Passed Courses</h3>
+                <button class="modal-close" onclick="closeModal('baModal')" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-summary-bar">
+                <span><i class="fa-solid fa-award"></i> Academic Title: univ. bacc. croat. et soc.</span>
+                <span><i class="fa-solid fa-chart-simple"></i> Final GPA (weighted average): 4.426 / 5.00</span>
+                <span><i class="fa-solid fa-layer-group"></i> Total ECTS: 194.0</span>
+                <span><i class="fa-regular fa-calendar-check"></i> Graduated: July 10, 2024</span>
+            </div>
+            <div class="modal-body">
+                <table class="transcript-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Course / Subject</th>
+                            <th>ECTS</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Croatian Phonology</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>2</td><td>Introduction to Sociology</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>3</td><td>Modern and Post-Modern Croatian Literature</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>4</td><td>Basic Croatian Linguistic Culture</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>5</td><td>Croatian Social and Cultural History from the 19th Century to the Present Day</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>6</td><td>Latin Language 2</td><td>2.0</td><td><span class="grade-badge grade-3">3 (good)</span></td></tr>
+                        <tr><td>7</td><td>Sociology of Croatian Society 1 - Sociology of Croatian Regions</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>8</td><td>Proseminar</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>9</td><td>Physical and Health Education</td><td>2.0</td><td><span class="grade-badge grade-pass">+ (completed)</span></td></tr>
+                        <tr><td>10</td><td>Academic English</td><td>4.0</td><td><span class="grade-badge grade-2">2 (sufficient)</span></td></tr>
+                        <tr><td>11</td><td>Introduction to Scientific Work</td><td>5.0</td><td><span class="grade-badge grade-3">3 (good)</span></td></tr>
+                        <tr><td>12</td><td>Systematic Sociology 1</td><td>7.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>13</td><td>Sociology of Croatian Society 2</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>14</td><td>Croatian Social and Cultural History by the End of the 18th Century</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>15</td><td>Croatian Literature of Romanticism and Realism</td><td>4.0</td><td><span class="grade-badge grade-3">3 (good)</span></td></tr>
+                        <tr><td>16</td><td>Society and Sustainability</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>17</td><td>Interlingual Features and Structure of the Croatian Language</td><td>2.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>18</td><td>The Role of Latinisms in the Croatian Language</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>19</td><td>Croatian Literary Baroque and the Ages of Enlightenment</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>20</td><td>Systematic Sociology 2</td><td>7.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>21</td><td>Introduction to Social Research Methods 1</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>22</td><td>Theory and Interpretation of Literary Text</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>23</td><td>Croatian Morphology</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>24</td><td>Physical Education and Sports 3</td><td>0.0</td><td><span class="grade-badge grade-pass">+ (completed)</span></td></tr>
+                        <tr><td>25</td><td>Physical Education and Health Culture</td><td>2.0</td><td><span class="grade-badge grade-pass">+ (completed)</span></td></tr>
+                        <tr><td>26</td><td>Social Psychology</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>27</td><td>Geographical Features of Croatia</td><td>2.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>28</td><td>Croatian Literature of Humanism and Renaissance</td><td>5.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>29</td><td>Croatian Syntax</td><td>4.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>30</td><td>Sociological Theory 1</td><td>7.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>31</td><td>Orthoepy</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>32</td><td>Statistics for Social Research</td><td>6.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>33</td><td>Croatian Ethnology</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>34</td><td>Physical Education and Sports 4</td><td>0.0</td><td><span class="grade-badge grade-pass">+ (completed)</span></td></tr>
+                        <tr><td>35</td><td>Sociology of Food</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>36</td><td>Croatian Archaeological Heritage</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>37</td><td>Sociology of Croatian Society 3</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>38</td><td>Croatian Fine Art</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>39</td><td>Sociological Theory 2</td><td>7.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>40</td><td>Croatian Literature of the Middle Ages</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>41</td><td>Institutions of the Croatian People, Society and the State</td><td>2.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>42</td><td>Applied Statistics in Social Research</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>43</td><td>History of Croatian Theatre</td><td>2.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>44</td><td>Croatian Encyclopedics</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>45</td><td>History of the Croatian Standard Language</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>46</td><td>Sociology of Croatian Society 4 - Media System Analysis</td><td>4.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>47</td><td>Exact Sciences in Croatian Culture</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>48</td><td>Post-Industrial Society</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>49</td><td>BA Work (Bachelor’s Thesis)</td><td>5.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>50</td><td>Croatian Glagolitism</td><td>3.0</td><td><span class="grade-badge grade-4">4 (very good)</span></td></tr>
+                        <tr><td>51</td><td>Croatian Space and Architecture</td><td>3.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                        <tr><td>52</td><td>Sociology of Religion</td><td>4.0</td><td><span class="grade-badge grade-5">5 (excellent)</span></td></tr>
+                    </tbody>
+                </table>
+                <div class="modal-legend">
+                    <strong>Legend:</strong> <strong>+</strong> = Course obligations fulfilled (ungraded course)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESEARCH & ACADEMIC EXPERIENCE SECTION -->
+    <section class="resume-section" id="research-academic">
+        <h2>Publications & Research/Academic Experience</h2>
+
+        <!-- ITEM 1: PUBLICATION / AI ADOPTION STUDY -->
+        <div class="resume-item" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+            <div class="resume-content" style="width: 100%;">
+                <h3>Usage Practices and Trust in Artificial Intelligence: An Analytical Sociology Approach</h3>
+                <div class="subheading">Publication / Independent Authored Research Study (2025 - 2026)</div>
+                <div class="badge-group" style="margin-top: 0.5rem; margin-bottom: 0.75rem;">
+                    <span class="btn-badge status"><i class="fa-solid fa-hourglass-half"></i> Manuscript under peer review</span>
+                    <a href="https://www.researchgate.net/publication/404197729_Usage_Practices_and_Trust_in_Artificial_Intelligence_an_Analytical_Sociology_Approach" target="_blank" rel="noopener" class="btn-badge primary">
+                        <i class="fa-brands fa-researchgate"></i> Preprint (ResearchGate)
+                    </a>
+                    <a href="https://github.com/alen-hu/Usage-Practices-and-Trust-in-Artificial-Intelligence-an-Analytical-Sociology-Approach" target="_blank" rel="noopener" class="btn-badge outline">
+                        <i class="fa-brands fa-github"></i> Replication Code (R / GitHub)
+                    </a>
+                </div>
+                <p style="margin-bottom: 0.85rem; color: #495057;">
+                    This study investigates the micro-to-macro mechanisms driving the diffusion of Large Language Models (LLMs) and trust formation among university students by rigorously combining empirical survey data with agent-based modelling implemented in R. Grounded in Hedström’s DBO (Desires, Beliefs, Opportunities) theory, the research constructs a custom 7-section questionnaire administered to a non-probabilistic sample of Croatian university students (N=309) to capture usage practices, motivational drivers, perceived norms, and evolving trust structures.
+                </p>
+                <p style="margin-bottom: 0.85rem; color: #495057;">
+                    Methodologically, a simulation model was developed over 100 timesteps and initialized with empirical survey data to bridge individual micro-actions with macro-level adoption outcomes. The model incorporates a homophily-based network topology, formalizing individual social thresholds, expectation-correction mechanisms, and dynamic trust-belief feedback loops. Exploratory factor analysis identified latent theoretical constructs, which were subsequently analyzed using logistic and OLS regression models alongside longitudinal mixed-effects modelling.
+                </p>
+                <p style="color: #495057;">
+                    The research demonstrates that rational imitation within peer networks serves as the primary predictor of technology adoption in early stages, whereas the actual quality and depth of usage practices critically govern the longitudinal development of trust. By isolating the distinct effects of rational imitation versus normative pressure, the study offers a robust mechanism-based explanation for technology diffusion, contributing directly to computational social sciences and the sociological understanding of human-AI interaction.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 2: MASTER'S THESIS -->
+        <div class="resume-item" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+            <div class="resume-content" style="width: 100%;">
+                <h3>The Concept of Interaction in Sociology</h3>
+                <div class="subheading">Master’s Thesis Research • Faculty of Croatian Studies, University of Zagreb (2025 - 2026)</div>
+                <div style="margin: 0.5rem 0 0.75rem 0;">
+                    <a href="https://dabar.srce.hr/en/object/hrstud:4665" target="_blank" rel="noopener" class="btn-repo-link">
+                        <i class="fa-solid fa-book-bookmark"></i> Master’s Thesis (FHS Repository)
+                    </a>
+                </div>
+                <p style="margin-bottom: 0.85rem; color: #495057;">
+                    This master's thesis represents a systematic conceptual analysis of how interaction is theorized across major sociological traditions. Rather than treating interaction as a self-evident background category, the research examines it simultaneously as a situational process unfolding between actors, a relational pattern capable of stabilizing social relations, and a core micro-foundational mechanism mediating between individual action and broader macro-social outcomes.
+                </p>
+                <p style="margin-bottom: 0.85rem; color: #495057;">
+                    Special attention is dedicated to how classical and contemporary paradigms - including systems theory and analytical sociology - operationalize interaction in empirical research. The thesis directly addresses the intricate relationship between conceptual clarity and methodological tractability, tackling the enduring sociological problem of bridging micro-social interactive processes with macro-social structural phenomena.
+                </p>
+                <p style="color: #495057;">
+                    The study develops a comprehensive theoretical synthesis of existing approaches, establishing a rigorous conceptual framework designed to analyze the structural coupling between individual-level behavioral dynamics and large-scale social patterns. Under the supervision of Assistant Professor Erik Brezovec, PhD, the thesis bridges foundational sociological theory with contemporary analytical demands.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 3: TEACHING ASSISTANT / DEMONSTRATOR -->
+        <div class="resume-item" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+            <div class="resume-content" style="width: 100%;">
+                <h3>Student Teaching Assistant (Demonstrator)</h3>
+                <div class="subheading">Department of Sociology, Faculty of Croatian Studies, University of Zagreb</div>
+                <p style="margin-top: 0.5rem; margin-bottom: 0.85rem; color: #495057;">
+                    Appointed as a Student Teaching Assistant by the Department Council upon the recommendation of course holders, contributing across foundational and advanced sociological courses ordered chronologically below:
+                </p>
+
+                <div class="course-grid">
+                    <div class="course-card">
+                        <strong>Systematic Sociology 1</strong>
+                        <span>Academic year 2022/2023</span>
+                    </div>
+                    <div class="course-card">
+                        <strong>Systematic Sociology 2</strong>
+                        <span>Academic year 2023/2024</span>
+                    </div>
+                    <div class="course-card">
+                        <strong>Contemporary Sociological Theories</strong>
+                        <span>Academic year 2025/2026</span>
+                    </div>
+                    <div class="course-card">
+                        <strong>Microsociological Theories</strong>
+                        <span>Academic year 2025/2026</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 0.85rem; margin-bottom: 0.5rem; color: #343a40; font-weight: 700; text-transform: uppercase; font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.2rem;">Core Responsibilities & Academic Contribution:</p>
+                <ul style="padding-left: 1.25rem; color: #495057;">
+                    <li><strong>Lectures, seminars & exercises:</strong> Assisting in delivery, preparing presentations following the instructor’s guidance, developing supplementary teaching materials, and organising in-class student work (group problem-solving, discussions).</li>
+                    <li><strong>Examinations & continuous assessment:</strong> Preparing mid-terms under the instructor’s supervision, compiling exam questions, preparing pre-exam revision materials, and assisting in the supervision and marking of assessments.</li>
+                    <li><strong>Research contribution:</strong> Assisting the mentor with bibliographic preparation, conducting smaller research tasks, and participating in the preparation of research projects.</li>
+                    <li><strong>Student mentorship in seminars:</strong> Guiding students through key sociological concepts, texts, and theoretical traditions; reviewing weekly assignments and assisting with course literature.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ITEM 4: IPSOS INTERNSHIP -->
+        <div class="resume-item" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+            <div class="resume-content" style="width: 100%;">
+                <h3>Research Intern</h3>
+                <div class="subheading">Ipsos, Zagreb, Croatia (February - June 2025)</div>
+                <ul style="margin-top: 0.5rem; padding-left: 1.25rem; color: #495057;">
+                    <li>Completed a structured rotation across departments: Marketing Research, Public Opinion Polling, Brand Tracking (BrandPlus), and Product & Brand Testing.</li>
+                    <li>Gained applied experience across the full empirical research pipeline: questionnaire design, fieldwork, data processing, and reporting.</li>
+                    <li>Worked with both quantitative and qualitative methods in a professional, client-facing research environment.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SKILLS & LANGUAGES SECTION -->
+    <section class="resume-section" id="skills">
+        <h2>Professional Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-book-open"></i> Theoretical Knowledge</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> Fundamental areas of sociology</li>
+                    <li><i class="fa-solid fa-check"></i> Classical sociological theory</li>
+                    <li><i class="fa-solid fa-check"></i> Modern and contemporary sociological theory</li>
+                    <li><i class="fa-solid fa-check"></i> Sociological literature analysis & comprehension</li>
+                    <li><i class="fa-solid fa-check"></i> Application of theory to concrete problems</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-square-poll-vertical"></i> Quantitative Methods</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> Survey design and empirical analysis</li>
+                    <li><i class="fa-solid fa-check"></i> Multivariate statistics & statistical learning</li>
+                    <li><i class="fa-solid fa-check"></i> Agent-based modelling (ABM)</li>
+                    <li><i class="fa-solid fa-check"></i> Computational simulation</li>
+                    <li><i class="fa-solid fa-check"></i> Computational social sciences</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-comments"></i> Qualitative Methods</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> Qualitative data analysis & grounded theory</li>
+                    <li><i class="fa-solid fa-check"></i> Qualitative interviews</li>
+                    <li><i class="fa-solid fa-check"></i> Focus groups</li>
+                    <li><i class="fa-solid fa-check"></i> Content analysis</li>
+                    <li><i class="fa-solid fa-check"></i> Interpretive social research</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-laptop-code"></i> Software & Tools</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> <strong>Statistical:</strong> R, SPSS, jamovi, NVivo</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Analytics & Dev:</strong> GitHub, Power BI</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-palette"></i> Office & Design Tools</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                    <li><i class="fa-solid fa-check"></i> Canva (visual design & presentation)</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h4><i class="fa-solid fa-magnifying-glass-chart"></i> Research Strengths</h4>
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-check"></i> Integration of theory and empirical analysis</li>
+                    <li><i class="fa-solid fa-check"></i> Critical thinking & problem-solving</li>
+                    <li><i class="fa-solid fa-check"></i> Data interpretation and reporting</li>
+                </ul>
+            </div>
+
+            <div class="skill-box" style="grid-column: 1 / -1; max-width: 100%;">
+                <h4><i class="fa-solid fa-users-rectangle"></i> General Academic & Soft Skills</h4>
+                <ul class="skill-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem 1.5rem;">
+                    <li><i class="fa-solid fa-check"></i> Teamwork & collaboration</li>
+                    <li><i class="fa-solid fa-check"></i> Public speaking & academic presentation</li>
+                    <li><i class="fa-solid fa-check"></i> Academic writing & communication</li>
+                    <li><i class="fa-solid fa-language"></i> <strong>Croatian:</strong> Native</li>
+                    <li><i class="fa-solid fa-language"></i> <strong>English:</strong> C1 (Academic reading & writing)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section class="resume-section" id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="resume-item">
+            <div class="resume-content">
+                <h3>Hostel Manager</h3>
+                <div class="subheading">HI Hostel Zagreb, Zagreb, Croatia</div>
+                <div class="study-period"><i class="fa-regular fa-calendar"></i> 2026 - Present</div>
+                <p style="margin-top: 0.5rem; color: #495057;">
+                    Comprehensive leadership and strategic management of hostel operations, overseeing material, financial, and human resources at the sector level. Responsible for proposing annual business, revenue, and maintenance plans while implementing rationalization and quality management measures. Directs daily coordination of staff duties, financial performance monitoring, and compliance with administrative, legal, and safety standards.
+                </p>
+                <div class="edu-actions">
+                    <button type="button" class="btn-modal-trigger" onclick="openModal('hostelManagerModal')">
+                        <i class="fa-solid fa-list-check"></i> View Full Scope of Duties
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <div class="resume-content">
+                <h3>Receptionist</h3>
+                <div class="subheading">HI Hostel Zagreb, Zagreb, Croatia</div>
+                <div class="study-period"><i class="fa-regular fa-calendar"></i> 2022 - 2026</div>
+                <p style="margin-top: 0.5rem; color: #495057;">
+                    Held a full-time position as a student throughout undergraduate and graduate studies while maintaining strong academic performance. Responsible for front desk operations, guest relations, and administrative coordination in compliance with legal regulations. Managed financial transactions, daily billing, reservation systems, and active communication with guests to ensure high standards of satisfaction.
+                </p>
+                <div class="edu-actions">
+                    <button type="button" class="btn-modal-trigger" onclick="openModal('receptionistModal')">
+                        <i class="fa-solid fa-list-check"></i> View Full Scope of Duties
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL: HOSTEL MANAGER DUTIES -->
+    <div class="modal-overlay" id="hostelManagerModal" onclick="handleOverlayClick(event, 'hostelManagerModal')">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-briefcase"></i> Hostel Manager - Scope of Duties</h3>
+                <button class="modal-close" onclick="closeModal('hostelManagerModal')" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-summary-bar">
+                <span><i class="fa-solid fa-building"></i> Organization Unit: Sector of Hostel Business / Youth Hostel</span>
+                <span><i class="fa-solid fa-calendar-days"></i> Period: 2026 - Present</span>
+            </div>
+            <div class="modal-body">
+                <ul style="padding-left: 1.25rem; line-height: 1.8; color: #495057;">
+                    <li>Hostel management and organizing work within the hostel.</li>
+                    <li>Proposing an annual work plan, revenue and expenditure plan, current and investment maintenance plan.</li>
+                    <li>Caring for the management of the quality system in the hostel and proposing measures to improve work and business operations.</li>
+                    <li>Regular monitoring of trends and changes in the local hostel market.</li>
+                    <li>Regularly organizing and leading staff meetings.</li>
+                    <li>Implementing measures for more economical and rational business operations.</li>
+                    <li>Managing and organizing processes related to guest satisfaction.</li>
+                    <li>Regular control of guest satisfaction monitoring by receptionists.</li>
+                    <li>Proposing the recruitment dynamics of seasonal workers.</li>
+                    <li>Control of delivered goods and services and invoice verification.</li>
+                    <li>Assigning work tasks to employees in the hostel and monitoring their execution.</li>
+                    <li>Controlling attendance at work.</li>
+                    <li>Representing the hostel within the scope of authorizations.</li>
+                    <li>Caring for the procurement of equipment and inventory, and their correct and rational use.</li>
+                    <li>Caring for bed sales and capacity utilization.</li>
+                    <li>Caring for other provided services.</li>
+                    <li>Caring for resolving guest complaints.</li>
+                    <li>Approving the menu.</li>
+                    <li>Caring for the management of administrative and cash register operations, and timely delivery to accounting.</li>
+                    <li>Caring for statistical reports and timely delivery to competent authorities.</li>
+                    <li>Caring for the timely collection of receivables and payment of invoices.</li>
+                    <li>Caring for fire protection and safety at work.</li>
+                    <li>Caring for the neat appearance of the hostel.</li>
+                    <li>Caring for fixed assets.</li>
+                    <li>Caring for maintaining the guest ledger and timely delivery of data to competent authorities.</li>
+                    <li>Caring for the collection and payment of the tourist tax.</li>
+                    <li>Caring for the consumption of energy, water, and overall materials.</li>
+                    <li>Caring for HR needs and employment.</li>
+                    <li>Monitoring and analyzing data on the economic effects of the hostel and proposing the incentive part of the salary.</li>
+                    <li>Making the schedule for the use of annual leaves and days off, and decisions on using annual leave for hostel workers.</li>
+                    <li>Attending board of directors / collegium meetings.</li>
+                    <li>Performing other tasks by order of the executive director and the Sector Director.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: RECEPTIONIST DUTIES -->
+    <div class="modal-overlay" id="receptionistModal" onclick="handleOverlayClick(event, 'receptionistModal')">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-briefcase"></i> Receptionist - Scope of Duties</h3>
+                <button class="modal-close" onclick="closeModal('receptionistModal')" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-summary-bar">
+                <span><i class="fa-solid fa-building"></i> Organization Unit: Sector of Hostel Business / Youth Hostel</span>
+                <span><i class="fa-solid fa-calendar-days"></i> Period: 2022 - 2026 (Student Position)</span>
+            </div>
+            <div class="modal-body">
+                <ul style="padding-left: 1.25rem; line-height: 1.8; color: #495057;">
+                    <li>Welcoming guests to the facility.</li>
+                    <li>Check-in and check-out of guests in accordance with legal regulations.</li>
+                    <li>Answering emails.</li>
+                    <li>Active engagement on the website and social media.</li>
+                    <li>Updating status on reservation systems.</li>
+                    <li>Encouraging guests to give their opinion / criticism.</li>
+                    <li>Encouraging guests to fill out feedback questionnaires.</li>
+                    <li>Monitoring guest satisfaction on reservation systems and notifying the director about them.</li>
+                    <li>Accommodating guests and introducing them to house rules, providing information about the facility, transport timetables, the city, benefits for members, public events in the city, etc.</li>
+                    <li>Managing guest cloakroom, receiving and issuing stored items and proper safekeeping.</li>
+                    <li>Charging services, calculation of daily payments and depositing money into the giro account.</li>
+                    <li>Enrolling and selling travel and discount cards and other membership materials.</li>
+                    <li>Selling goods related to accommodation in the hostel (toothpaste, postcards, etc.).</li>
+                    <li>Reporting the number of meals to the kitchen, related to the arrival and departure of guests.</li>
+                    <li>Daily preparation of kitchen and buffet receipt notes (primke) based on supplier documents.</li>
+                    <li>Caring for order and peace in the hostel.</li>
+                    <li>Caring for the neatness of the reception, cleaning the reception, common and public areas and rooms.</li>
+                    <li>Renting sports equipment.</li>
+                    <li>Data processing, preparation of reports and analysis by order of the hostel manager and reception manager.</li>
+                    <li>Proposing and creating communication tools for direct communication with hostel guests.</li>
+                    <li>Performing other tasks by order of the hostel manager and reception manager.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            <script>
+        // Highlight active section in sidebar while scrolling
+        const sections = document.querySelectorAll('.resume-section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 180) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Modal functions for Transcript of Records
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function handleOverlayClick(event, modalId) {
+            if (event.target.id === modalId) {
+                closeModal(modalId);
+            }
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.open').forEach(modal => {
+                    modal.classList.remove('open');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
